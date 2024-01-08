@@ -1,0 +1,18 @@
+{
+  "name": "React Frontend",
+  "dockerComposeFile": "../../docker-compose.yaml",
+  "service": "frontend",
+  "workspaceFolder": "/app",
+  "customizations": {
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode"
+    ],
+  },
+  // Use 'postCreateCommand' to run commands after the container is created
+  "postCreateCommand": "npm install",
+  "shutdownAction": "stopCompose"
+}

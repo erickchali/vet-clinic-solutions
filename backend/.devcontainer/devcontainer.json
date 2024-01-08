@@ -1,0 +1,29 @@
+{
+	"name": "VetClinics Sample",
+	"dockerComposeFile": ["../../docker-compose.yaml", "docker-compose.yaml"],
+	"service": "backend",
+	"runServices": [
+		"backend",
+		"db"
+	],
+	"workspaceFolder": "/workspace/backend",
+	"remoteUser": "vscode",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"go.gopath": "/go",
+				"go.goroot": "/usr/local/go"
+			},
+			"extensions": [
+				"golang.Go",
+				"eamodio.gitlens",
+				"arturock.gitstash"
+			]
+		}
+	},
+	"postCreateCommand": "go mod download",
+	"shutdownAction": "stopCompose",
+	"features": {
+		"git": "latest"
+	}
+}
